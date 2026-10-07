@@ -1,0 +1,56 @@
+
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Learn Guitar for Beginners",
+      "slug": "learn-guitar-for-beginners",
+      "description": "Learn the basics of guitar, chords, strumming, and simple songs.",
+      "price": 29.99,
+      "instructor": "John Smith",
+      "isFeatured": true,
+      "image": "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Piano Masterclass",
+      "slug": "piano-masterclass",
+      "description": "Master piano fundamentals, scales, chords, and popular melodies.",
+      "price": 39.99,
+      "instructor": "Emily Johnson",
+      "isFeatured": true,
+      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "title": "Music Theory Essentials",
+      "slug": "music-theory-essentials",
+      "description": "Understand notes, scales, chords, rhythm, and the fundamentals of music theory.",
+      "price": 19.99,
+      "instructor": "Michael Brown",
+      "isFeatured": false,
+      "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Vocal Training Course",
+      "slug": "vocal-training-course",
+      "description": "Improve your singing skills with breathing, pitch, voice control, and vocal exercises.",
+      "price": 34.99,
+      "instructor": "Sarah Williams",
+      "isFeatured": true,
+      "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Drum Fundamentals",
+      "slug": "drum-fundamentals",
+      "description": "Learn basic drum techniques, beats, rhythms, and coordination.",
+      "price": 24.99,
+      "instructor": "David Wilson",
+      "isFeatured": false,
+      "image": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
+
