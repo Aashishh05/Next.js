@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/moving-border";
 function HeroSection() {
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black px-6 py-20">
+      {/* Grid pattern */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-grid opacity-[0.02]"
+      />
+
       <Spotlight
         className="left-[-10%] top-[-50%] rotate-[10deg]"
         fill="navy"

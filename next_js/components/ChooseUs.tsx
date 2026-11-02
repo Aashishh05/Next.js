@@ -1,62 +1,82 @@
 "use client";
+
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
-import { Stick } from "next/font/google";
- 
+
 const content = [
   {
-    title: "Collaborative Editing",
+    title:
+      "Discover Your Sound with Us: A Personal Journey in Music Mastery",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Embark on a musical journey that's uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=800&q=80"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="guitar student learning"
         />
       </div>
     ),
   },
   {
-    title: "Version control",
+    title: "Live Feedback & Engagement",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Immerse yourself in an interactive learning experience where feedback is immediate, just like real-time changes in a collaborative project. This approach enhances your understanding and mastery of music concepts and performance techniques.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <img
+          src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="vocal training session"
+        />
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Cutting-Edge Curriculum",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Our curriculum is continuously updated to include the latest music education trends and technologies, ensuring you're always learning with the most current and effective methods. Say goodbye to outdated materials and welcome an education that evolves with the industry.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <img
+          src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="music theory essentials"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Limitless Learning Opportunities",
+    description:
+      "With our expansive resource library and dynamic course offerings, you'll never find yourself without something new to explore. Our platform provides continuous opportunities for growth, ensuring your musical skills are always advancing.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <img
+          src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="drumming practice"
+        />
       </div>
     ),
   },
 ];
+
 function ChooseUs() {
   return (
-    <div >
-<StickyScroll content={content}/>
+    <div>
+      <StickyScroll content={content} />
     </div>
-  )
+  );
 }
 
-export default ChooseUs
+export default ChooseUs;
