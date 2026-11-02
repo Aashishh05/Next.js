@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Quote, Star } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -15,6 +14,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    image: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -70,76 +70,57 @@ export const InfiniteMovingCards = ({
       }
     }
   };
-
-  // Derive avatar initials from the student's name
-  const initials = (name: string) =>
-    name
-      .split(" ")
-      .map((word) => word[0])
-      .slice(0, 2)
-      .join("")
-      .toUpperCase();
-
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap py-4",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
           start && "animate-scroll",
-          pauseOnHover && "rounded-xl hover:[animation-play-state:paused]",
+          pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className={cn(
-              "group/card relative w-[350px] max-w-full shrink-0 snap-start rounded-2xl border border-white/10 bg-white/[0.04] px-8 py-8 backdrop-blur-sm transition-colors duration-300",
-              "hover:border-indigo-400/30 hover:bg-white/[0.07] md:w-[440px]",
-            )}
             key={item.name || idx}
+            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-[linear-gradient(180deg,#1e293b,#0f172a)]"
           >
-            {/* Gradient hover glow */}
+            {/* Dotted dithered border glow */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-transparent to-purple-500/10 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100"
+              className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)] rounded-2xl bg-gradient-to-l from-slate-400/10 via-slate-300/50 to-slate-400/10 bg-[length:4px_4px] blur-[2px]"
             />
+            <blockquote>
+              <span className="relative z-20 text-sm leading-[1.6] font-normal text-gray-100">
+                {item.quote}
+              </span>
 
-            <blockquote className="flex h-full flex-col justify-between">
-              <div>
-                {/* Quote icon + rating */}
-                <div className="mb-6 flex items-center justify-between">
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-4 w-4 fill-indigo-400 text-indigo-400"
-                      />
-                    ))}
-                  </div>
-                  <Quote className="h-7 w-7 rotate-180 text-indigo-400/40" />
-                </div>
-
-                <span className="relative z-20 block text-sm leading-[1.7] text-slate-200">
-                  {item.quote}
+              <div className="relative z-20 mt-6 flex flex-row items-center">
+                {/* Avatar */}
+                <span className="me-3 flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-slate-600">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    width={40}
+                    height={40}
+                    className="h-full w-full object-cover"
+                  />
                 </span>
-              </div>
 
-              <div className="relative z-20 mt-8 flex items-center gap-3 border-t border-white/5 pt-6">
-                {/* Avatar with initials */}
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20">
-                  {initials(item.name)}
-                </span>
-                <span className="flex flex-col gap-0.5">
-                  <span className="text-sm font-semibold text-white">
+                <span className="flex flex-col gap-1">
+                  <span className="text-sm leading-[1.6] font-medium text-white">
                     {item.name}
                   </span>
-                  <span className="text-xs text-slate-400">{item.title}</span>
+                  <span className="text-sm leading-[1.6] font-normal text-gray-400">
+                    {item.title}
+                  </span>
                 </span>
               </div>
             </blockquote>

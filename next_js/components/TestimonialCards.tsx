@@ -10,36 +10,48 @@ const musicSchoolTestimonials = [
       "An incredible musical experience! The instructors helped me discover my voice and build confidence in every performance.",
     name: "Olivia Bennett",
     title: "Vocal Student",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=96&h=96&q=80",
   },
   {
     quote:
       "Learning guitar here has been an amazing journey. Every lesson is engaging, inspiring, and filled with creativity.",
     name: "James Anderson",
     title: "Guitar Student",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&h=96&q=80",
   },
   {
     quote:
       "The teachers genuinely care about their students. I've improved my piano skills more than I ever imagined.",
     name: "Sophia Martinez",
     title: "Piano Student",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=96&h=96&q=80",
   },
   {
     quote:
       "From music theory to live performances, every experience has helped me grow as a musician.",
     name: "Daniel Wilson",
     title: "Music Production Student",
+    image:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=96&h=96&q=80",
   },
   {
     quote:
       "A welcoming environment with passionate instructors. I've found my confidence and developed a real love for music.",
     name: "Emma Thompson",
     title: "Vocal Student",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=96&h=96&q=80",
   },
   {
     quote:
       "The perfect place to explore creativity, learn new instruments, and connect with people who share your passion for music.",
     name: "Noah Williams",
     title: "Drum Student",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=80",
   },
 ];
 
